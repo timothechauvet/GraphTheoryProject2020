@@ -6,20 +6,23 @@ def main():
     nb_max  = 13
 
     while(cont):
-        text_in  = "Enter the number of your graph : "
 
-        #Verify if the input is a number
         while(not chosen):
-            nb_graph = input(text_in)
 
             try:
-                nb_graph = int(nb_graph)
+                # Demands a number. int() throws an error if the input is not a number.
+                nb_graph = int(input("Enter the number of your graph: "))
+                # Chosen is set to True to break from the loop.
                 chosen = True
             except ValueError:
+                # A message is printed in case the input was not a number.
                 print("Please enter a correct number")
+
+
+        # We lock the number to the highest test file number, in our case 13.
         nb_graph = min(nb_graph, nb_max)
 
-        #Create the graph with the input
+        # Create the graph with the input
         graph = Graph(nb_graph)
 
         print(graph.adjacency_matrix[0])
@@ -29,5 +32,5 @@ def main():
 
         input("Press enter to continue...")
 
-#Main program      
+# Main program
 main()
