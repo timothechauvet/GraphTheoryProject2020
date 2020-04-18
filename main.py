@@ -24,13 +24,19 @@ def main():
 
     while nb_graph:
 
-        # Create the graph with the input
+        # Create the graph with the input.
         graph = Graph(nb_graph)
 
-        print(graph.adjacency_matrix[0])
+        # Display the adjency matrix of the graph.
         graph.display_adjacency_matrix()
+
+        # Display the value matrix of the graph.
         graph.display_value_matrix()
-        graph.detect_loop()
+
+        # Detect if there is a loop in the graph.
+        if not graph.detect_loop():
+            # Display ranks
+            graph.display_ranks()
 
         nb_graph = user_input()
 
