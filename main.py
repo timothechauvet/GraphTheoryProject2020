@@ -17,8 +17,12 @@ def main():
                 chosen = True
             except ValueError:
                 print("Please enter a correct number")
-            
+        print("WORKS 1")
         nb_graph = min(nb_graph, nb_max)
 
         graph = Graph(nb_graph)
-        
+
+        graph.display()
+
+#Main program      
+main()
