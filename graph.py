@@ -15,7 +15,7 @@ class Graph:
 
     
     #Display the adjacent matrix
-    def display_adjacent(self):
+    def display_adjacency_matrix(self):
         print("\n- ADJACENT MATRIX -\n\n")
         for y in range(0, len(self.adjacency_matrix)):
             for x in range(0, len(self.adjacency_matrix)):
@@ -26,7 +26,7 @@ class Graph:
             print('\n', end='')
 
     #Display the value matrix
-    def display_value(self):
+    def display_value_matrix(self):
         print("\n- VALUE MATRIX -\n\n")
         print('\n'.join([''.join(['{:4}'.format(item) for item in row]) 
             for row in self.adjacency_matrix]))

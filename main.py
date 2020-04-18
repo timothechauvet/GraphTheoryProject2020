@@ -26,8 +26,8 @@ def main():
         graph = Graph(nb_graph)
 
         print(graph.adjacency_matrix[0])
-        graph.display_adjacent()
-        graph.display_value()
+        graph.display_adjacency_matrix()
+        graph.display_value_matrix()
         graph.detect_loop()
 
         input("Press enter to continue...")
