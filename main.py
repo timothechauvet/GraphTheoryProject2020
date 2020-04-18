@@ -17,12 +17,17 @@ def main():
                 chosen = True
             except ValueError:
                 print("Please enter a correct number")
-        print("WORKS 1")
         nb_graph = min(nb_graph, nb_max)
 
+        #Create the graph with the input
         graph = Graph(nb_graph)
 
-        graph.display()
+        print(graph.adjacency_matrix[0])
+        graph.display_adjacent()
+        graph.display_value()
+        graph.detect_loop()
+
+        input("Press enter to continue...")
 
 #Main program      
 main()
