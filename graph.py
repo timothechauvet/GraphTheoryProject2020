@@ -51,6 +51,7 @@ class Graph:
             for y in range(0, len(tmp_graph)): #Height
                 if(tmp_graph[y][x] != '-'):
                     empty = False
+                    break
             
             #If the column is empty, remove the edge from the table
             if empty:
@@ -76,8 +77,10 @@ class Graph:
         entry_pt = one_entry_point(self.adjacency_matrix)
         exit_pt  = one_exit_point(self.adjacency_matrix)
         cycle    = self.detect_loop()
+        weight   = same_weight_vertex(self.adjacency_matrix)
+        zero_etr = zero_entry(self.adjacency_matrix)
 
-        #if(entry_pt and exit_pt and not cycle and )
+        print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr)
         
 def delete_vertex(tmp_graph, nb_vertice, shift = 0):
     # Remove the column
