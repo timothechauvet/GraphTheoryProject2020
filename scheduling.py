@@ -73,3 +73,12 @@ def zero_entry(tmp_graph):
                 return False
 
     return True
+
+def no_negative_arc(tmp_graph):
+    #Go through the graph to search for a negative element
+    for x in range(0, len(tmp_graph)):
+        for elt in tmp_graph[x]:
+            if elt != '-' and int(elt) < 0:
+                return False
+    
+    return True

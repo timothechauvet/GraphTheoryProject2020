@@ -79,8 +79,9 @@ class Graph:
         cycle    = self.detect_loop()
         weight   = same_weight_vertex(self.adjacency_matrix)
         zero_etr = zero_entry(self.adjacency_matrix)
+        negative = no_negative_arc(self.adjacency_matrix)
 
-        print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr)
+        print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr, " NEG ", negative)
         
 def delete_vertex(tmp_graph, nb_vertice, shift = 0):
     # Remove the column
