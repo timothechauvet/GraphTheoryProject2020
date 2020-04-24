@@ -37,6 +37,8 @@ def main():
         if not graph.detect_loop():
             # Display ranks
             graph.display_ranks()
+        
+        graph.check_scheduling_graph()
 
         nb_graph = user_input()
 

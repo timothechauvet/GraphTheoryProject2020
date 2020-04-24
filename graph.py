@@ -1,5 +1,6 @@
 import csv
 import copy
+from scheduling import *
 
 class Graph:
     adjacency_matrix: list
@@ -7,11 +8,13 @@ class Graph:
     def __init__(self, nb_graph):
         filename = f'{nb_graph}.csv'
         self.adjacency_matrix = []
+        print("\n---File reading---")
 
         #Read the file and store values to a 2D table named array2D
         with open(filename, 'r') as file:
             reader = csv.reader(file, delimiter=';')
             for row in reader:
+                print(row)
                 self.adjacency_matrix.append(row)
 
     
@@ -68,7 +71,14 @@ class Graph:
         ranks = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
         for rank, vertices in enumerate(ranks):
             print("The vertices of rank " + str(rank) + " are: " + str(vertices))
+        
+    def check_scheduling_graph(self):
+        entry_pt = one_entry_point(self.adjacency_matrix)
+        exit_pt  = one_exit_point(self.adjacency_matrix)
+        cycle    = self.detect_loop()
 
+        #if(entry_pt and exit_pt and not cycle and )
+        
 def delete_vertex(tmp_graph, nb_vertice, shift = 0):
     # Remove the column
     for y in range(0, len(tmp_graph)): # Height
