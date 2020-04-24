@@ -82,7 +82,73 @@ class Graph:
         negative = no_negative_arc(self.adjacency_matrix)
 
         print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr, " NEG ", negative)
+
+
+    def find_predecessors(self):
+        #predecessor per task instead of per rank?
+        #initialisation
+        predecessors = []
+        for x in range(0,len(self.adjacency_matrix)):
+            p_list = []
+            predecessors.append(p_list)
+
+        #add each predecessor to corresponding node 
+        for row in range(0,len(self.adjacency_matrix)):
+            for column in range( 0,len(self.adjacency_matrix)):
+                if self.adjacency_matrix[row][column] != '-':
+                    predecessors[column].append(row)
+            
+        return predecessors
+
+    def earliest_date(self):
+        print("----EARLIEST DATE----")
+        ranks = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
+        predecessors = self.find_predecessors()
+       
+        #task time
+        task_time = self.calculate_time(ranks)
+
+        #ranked predecessor
+        ranked_predecessors = []
+        for x in range(0,len(ranks)):
+            ranked_predecessors.append([])
+
+        for x in range(0,len(ranks)):
+            for r in ranks[x]:
+                for y in predecessors[r]:
+                    ranked_predecessors[x].append(y)
+        #print(ranked_predecessors)
+
+        #remove dupplicate
+        for x in range(0,len(ranked_predecessors)-1):
+            ranked_predecessors[x] = list(dict.fromkeys(ranked_predecessors[x]))
+
+        #ranked_predecessors.remove(ranked_predecessors[0])
+        time_rp = self.calculate_time(ranked_predecessors)
         
+        print('ranked task',ranks)
+        print('time per task',task_time)
+        print("predecessors",predecessors)
+        print('predecessors per rank',ranked_predecessors)
+
+        print('time per predecessor',time_rp)
+    
+    def calculate_time(self,tmp_graph):
+        time_rp = copy.deepcopy(tmp_graph)
+        for row in range(0,len(self.adjacency_matrix)):
+            for column in range( 0,len(self.adjacency_matrix)):
+                if self.adjacency_matrix[row][column] != '-':
+                    v = int(self.adjacency_matrix[row][column] )
+                    for x in range(0,len(tmp_graph)):
+                        for y in tmp_graph[x]:
+                            if y == row:
+                                time_rp[x][tmp_graph[x].index(y)] = v
+        return time_rp
+        
+      
+
+
+
 def delete_vertex(tmp_graph, nb_vertice, shift = 0):
     # Remove the column
     for y in range(0, len(tmp_graph)): # Height
@@ -137,3 +203,5 @@ def calculate_ranks(tmp_graph):
         rank += 1
     
     return ranks
+
+
