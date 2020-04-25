@@ -41,8 +41,7 @@ def main():
         
         if graph.check_scheduling_graph():
             print("The graph is a scheduling graph")
-
-        graph.dates()
+            graph.dates()
 
         nb_graph = user_input()
 
