@@ -89,25 +89,22 @@ class Graph:
         #predecessor per task instead of per rank?
         #initialisation
         predecessors = []
-        for x in range(0,len(self.adjacency_matrix)):
+        for x in range(0,len(self.adjacency_matrix)):#for weight of graph, 2d empty list of list
             p_list = []
             predecessors.append(p_list)
-
-        #add each predecessor to corresponding node 
+        print("p", predecessors)
+        #add each predecessor to corresponding task 
         for row in range(0,len(self.adjacency_matrix)):
             for column in range( 0,len(self.adjacency_matrix)):
                 if self.adjacency_matrix[row][column] != '-':
                     predecessors[column].append(row)
-            
         return predecessors
 
     def dates(self):
         print("----EARLIEST DATE----")
-        ranked_task = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
+        ranked_task = calculate_ranks_no_display(copy.deepcopy(self.adjacency_matrix))
         predecessors = self.find_predecessors()
        
-        #task time
-
         #ranked predecessor
         ranked_predecessors = []
         for x in range(0,len(ranked_task)):
@@ -141,20 +138,19 @@ class Graph:
                 t1 = mt + t0
                 t0 = copy.deepcopy(t1)
                 path.append(tsk)
-                #print(tsk,"pour",mt)
         path.append(ranked_task[len(ranked_task)-1][0])
         print("The earliest date is",t1, "with the path ",path)
 
 
         print("----LATEST DATE----")
-        #debug
-        #print(ranked_task[len(ranked_task)-1][0])
+        #set tsk as last task
         tsk = ranked_task[len(ranked_task)-1][0]
         t0 = t1
-        time = []
+        
         for r in range(len(ranked_task)-1,-1,-1): #r = max rank to 0
+            time = []
             tmp = []
-
+            #find predecessors of tsk
             dx = ranked_task.index([tsk])
             pred = ranked_predecessors[dx][0]
             for x in range(0,len(ranked_task[r])):
@@ -162,14 +158,24 @@ class Graph:
                     if y == ranked_task[r][x]:
                         tmp.append(x)
             
-            
-            for x in tmp:
-                time.append(task_time[r][x])
-        
-        mint = min(time)
+            #find time of predecessors of tsk
+            if tmp:
+                for x in tmp:
+                    time.append(task_time[r][x])
+                #choose min time
+                mint = min(time)
+
+                #find whose task has min
+                x = time.index(mint)
+                print(time[x])
+
+                #min = new tsk
+
+
+
         #find wich task has this time
 
-        
+
                 #in predecessors of tsk
                 
 #            if tmp:
@@ -253,5 +259,46 @@ def calculate_ranks(tmp_graph):
         rank += 1
     
     return ranks
+
+def calculate_ranks_no_display(tmp_graph):
+    rank = 0
+    ranks = []
+
+    while sum([len(x) for x in ranks]) != len(tmp_graph):
+
+        ranks.append([])
+        x = 0
+        # We are searching for every sources and putting them into the current rank
+        while(x < len(tmp_graph)): # Width
+            crossed = True
+            for y in range(0, len(tmp_graph)): # Height
+                if(tmp_graph[y][x] != 'x'):
+                    crossed = False
+            
+            if not crossed:
+                empty = True
+                for y in range(0, len(tmp_graph)): # Height
+                    if(tmp_graph[y][x] != '-' and tmp_graph[y][x] != 'x'):
+                        empty = False
+            
+            # If the column is empty, it is a source, so we add it to the current rank
+            if not crossed and empty:
+                ranks[rank].append(x)
+
+            x += 1 # Checking the next vertex
+
+        # Now we have the sources for the current iteration
+        # We delete them from the adjacency matrix
+        for i in ranks[rank]:
+            for y in range(0, len(tmp_graph)): # Height
+                tmp_graph[y][i] = 'x'
+
+            tmp_graph[i] = ['x' for i in range(len(tmp_graph))]
+
+        # The current iteration is finished, we do the next iteration
+        rank += 1
+    
+    return ranks
+
 
 
