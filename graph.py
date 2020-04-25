@@ -102,36 +102,46 @@ class Graph:
 
     def earliest_date(self):
         print("----EARLIEST DATE----")
-        ranks = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
+        ranked_task = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
         predecessors = self.find_predecessors()
        
         #task time
-        task_time = self.calculate_time(ranks)
 
         #ranked predecessor
         ranked_predecessors = []
-        for x in range(0,len(ranks)):
+        for x in range(0,len(ranked_task)):
             ranked_predecessors.append([])
 
-        for x in range(0,len(ranks)):
-            for r in ranks[x]:
-                for y in predecessors[r]:
-                    ranked_predecessors[x].append(y)
-        #print(ranked_predecessors)
+        for x in range(0,len(ranked_task)):
+            for r in ranked_task[x]:
+                ranked_predecessors[x].append(predecessors[r])            
+      
+        #task time
+        task_time = self.calculate_time(ranked_task)
 
-        #remove dupplicate
-        for x in range(0,len(ranked_predecessors)-1):
-            ranked_predecessors[x] = list(dict.fromkeys(ranked_predecessors[x]))
+        tsk = 0
+        t0 = 0
+        for r in range(1,len(ranked_task)-1):
+            #if predecessor is tsk
+            tmp = []
+            for x in range(0,len(ranked_predecessors[r])):
+                
+                if tsk in ranked_predecessors[r][x]:
+                    tmp.append(x)
 
-        #ranked_predecessors.remove(ranked_predecessors[0])
-        time_rp = self.calculate_time(ranked_predecessors)
-        
-        print('ranked task',ranks)
-        print('time per task',task_time)
-        print("predecessors",predecessors)
-        print('predecessors per rank',ranked_predecessors)
+            time = []
+            for x in tmp:
+                time.append(task_time[r][x])
 
-        print('time per predecessor',time_rp)
+            if tmp:
+                mt = max(time)
+                my =task_time [r].index(mt)
+                tsk = ranked_task[r][my]
+                t1 = mt + t0
+                t0 = copy.deepcopy(t1)
+
+        print("The earliest date is",t1)
+
     
     def calculate_time(self,tmp_graph):
         time_rp = copy.deepcopy(tmp_graph)
