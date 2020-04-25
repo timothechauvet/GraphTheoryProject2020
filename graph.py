@@ -101,105 +101,59 @@ class Graph:
         return predecessors
 
     def dates(self):
-        print("----EARLIEST DATE----")
         ranked_task = calculate_ranks_no_display(copy.deepcopy(self.adjacency_matrix))
         predecessors = self.find_predecessors()
+        successors = self.find_successors()
+
+        print("----EARLIEST DATE----")
        
-        #ranked predecessor
-        ranked_predecessors = []
-        for x in range(0,len(ranked_task)):
-            ranked_predecessors.append([])
+        rank = 0
+        earliest_times = [[x,0] for x in range(len(self.adjacency_matrix))] # We create an array of tuples which will have the number of the node and it's earliest time
+        for rank in range(1,len(ranked_task)): # We go trough each rank (1 .. n)
+            for node in ranked_task[rank]: # For each node in the rank
+                node_predecessors = predecessors[node] # We take their predecessors
+                predecessors_time = [arr for arr in earliest_times if arr[0] in node_predecessors] # We then get the earliest times of these predecessors
+                print("For node " + str(node) + ": " + str(predecessors_time))
+                max_time_predecessor = max(predecessors_time, key=lambda predecessor:predecessor[1] + int(self.adjacency_matrix[predecessor[0]][node])) # We then get the maximum earliest time taking into account the weight of the predecessor
+                print(max_time_predecessor)
+                earliest_time = max_time_predecessor[1] + int(self.adjacency_matrix[max_time_predecessor[0]][node]) # We then calculate the earliest time of the current node
+                earliest_times[node][1] = earliest_time # And we add it to the earliest_times array
+        print(earliest_times)
 
-        for x in range(0,len(ranked_task)):
-            for r in ranked_task[x]:
-                ranked_predecessors[x].append(predecessors[r])            
-      
-        #task time
-        task_time = self.calculate_time(ranked_task)
+        print("----LATEST DATE----") # the procedure for calculating latest dates is fairly similar
 
-        tsk = 0
-        t0 = 0
-        path = [ranked_task[0][0]]
-        for r in range(1,len(ranked_task)-1):#for rank 1...n
-            tmp = []
-            for x in range(0,len(ranked_predecessors[r])):  #index of each task in each rank
-                #if predecessor is tsk, added in tmp
-                if tsk in ranked_predecessors[r][x]: 
-                    tmp.append(x)
+        rank = len(ranked_task)-1
+        latest_times = [[x,0] for x in range(len(self.adjacency_matrix))] # We create an array of tuples which will have the number of the node and it's latest time
+        latest_times[-1][1] = earliest_times[-1][1]
+        for rank in range(len(ranked_task)-2,-1,-1): # We go trough each rank (n-1 .. 0)
+            for node in ranked_task[rank]: # For each node in the rank
+                node_successors = successors[node] # We take their successors
+                successors_time = [arr for arr in latest_times if arr[0] in node_successors] # We then take the latest times of these successors
+                print("For node " + str(node) + ": " + str(successors_time))
+                max_time_successor = min(successors_time, key=lambda successor:successor[1]) # We then get the maximum latest time in the successors
+                print(max_time_successor)
+                latest_time = max_time_successor[1] - int(self.adjacency_matrix[node][max_time_successor[0]]) # We calculate the latest time of the current node by deducing the weight of the current node
+                latest_times[node][1] = latest_time # And we add it to the array
+        print(latest_times)
 
-            time = []
-            for x in tmp:
-                time.append(task_time[r][x]) #time of each task
+        print("----MARGINS----")
 
-            if tmp:
-                mt = max(time)
-                my =task_time [r].index(mt)
-                tsk = ranked_task[r][my]
-                t1 = mt + t0
-                t0 = copy.deepcopy(t1)
-                path.append(tsk)
-        path.append(ranked_task[len(ranked_task)-1][0])
-        print("The earliest date is",t1, "with the path ",path)
+        margins = [[x,0] for x in range(len(self.adjacency_matrix))] # We create an array of tuples which will have the number of the node and it's margin
+        for node in earliest_times:
+            margins[node[0]][1] = latest_times[node[0]][1] - node[1] # We fill the array with for each node margin = latest_time - earliest_time
 
-
-        print("----LATEST DATE----")
-        #set tsk as last task
-        tsk = ranked_task[len(ranked_task)-1][0]
-        t0 = t1
-        
-        for r in range(len(ranked_task)-1,-1,-1): #r = max rank to 0
-            time = []
-            tmp = []
-            #find predecessors of tsk
-            dx = ranked_task.index([tsk])
-            pred = ranked_predecessors[dx][0]
-            for x in range(0,len(ranked_task[r])):
-                for y in pred:
-                    if y == ranked_task[r][x]:
-                        tmp.append(x)
-            
-            #find time of predecessors of tsk
-            if tmp:
-                for x in tmp:
-                    time.append(task_time[r][x])
-                #choose min time
-                mint = min(time)
-
-                #find whose task has min
-                x = time.index(mint)
-                print(time[x])
-
-                #min = new tsk
-
-
-
-        #find wich task has this time
-
-
-                #in predecessors of tsk
-                
-#            if tmp:
-#                mt = min(time)
-#                my =task_time [r].index(mt)
-#                tsk = ranked_task[r][my]
-#                t1 = mt - t0
-#                t0 = copy.deepcopy(t1)
-                #print(tsk,"pour",mt)
-
-        print("The latest date is",t1)
-
+        print(margins)
     
-    def calculate_time(self,tmp_graph):
-        time_rp = copy.deepcopy(tmp_graph)
+    def find_successors(self):
+        succ = []
+        for x in range(0,len(self.adjacency_matrix)):#for weight of graph, 2d empty list of list
+            p_list = []
+            succ.append(p_list)
         for row in range(0,len(self.adjacency_matrix)):
             for column in range( 0,len(self.adjacency_matrix)):
                 if self.adjacency_matrix[row][column] != '-':
-                    v = int(self.adjacency_matrix[row][column] )
-                    for x in range(0,len(tmp_graph)):
-                        for y in tmp_graph[x]:
-                            if y == row:
-                                time_rp[x][tmp_graph[x].index(y)] = v
-        return time_rp
+                    succ[row].append(column)
+        return succ
         
       
 
