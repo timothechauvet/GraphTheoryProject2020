@@ -1,0 +1,222 @@
+Enter the number of your graph (0 to quit): 
+---File reading---
+['-', '0', '0', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '2', '-', '2', '2', '-', '-', '-', '-']
+['-', '-', '-', '3', '3', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '5', '-', '5']
+['-', '-', '-', '-', '-', '6', '6', '-', '6', '-']
+['-', '-', '-', '-', '-', '-', '2', '2', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '1']
+['-', '-', '-', '-', '-', '-', '-', '-', '6', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '1']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+
+- ADJACENT MATRIX -
+
+
+0 1 1 0 0 0 0 0 0 0 
+0 0 1 0 1 1 0 0 0 0 
+0 0 0 1 1 0 0 0 0 0 
+0 0 0 0 0 0 0 1 0 1 
+0 0 0 0 0 1 1 0 1 0 
+0 0 0 0 0 0 1 1 0 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 
+
+- VALUE MATRIX -
+
+
+-   0   0   -   -   -   -   -   -   -   
+-   -   2   -   2   2   -   -   -   -   
+-   -   -   3   3   -   -   -   -   -   
+-   -   -   -   -   -   -   5   -   5   
+-   -   -   -   -   6   6   -   6   -   
+-   -   -   -   -   -   2   2   -   -   
+-   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   6   -   
+-   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   -   -   
+removing vertice 0: ['0', '0', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['2', '-', '2', '2', '-', '-', '-', '-']
+removing vertice 0: ['3', '3', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '-', '-', '5', '-', '5']
+removing vertice 0: ['6', '6', '-', '6', '-']
+removing vertice 0: ['2', '2', '-', '-']
+removing vertice 0: ['-', '-', '1']
+removing vertice 0: ['6', '-']
+removing vertice 0: ['1']
+removing vertice 0: []
+THERE IS NO CYCLE
+tmp_graph len: 10
+sum ranks: 0
+-   0   0   -   -   -   -   -   -   -   
+-   -   2   -   2   2   -   -   -   -   
+-   -   -   3   3   -   -   -   -   -   
+-   -   -   -   -   -   -   5   -   5   
+-   -   -   -   -   6   6   -   6   -   
+-   -   -   -   -   -   2   2   -   -   
+-   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   6   -   
+-   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   -   -   
+inserting 0 into ranks of rank 0
+tmp_graph len: 10
+sum ranks: 1
+x   x   x   x   x   x   x   x   x   x   
+x   -   2   -   2   2   -   -   -   -   
+x   -   -   3   3   -   -   -   -   -   
+x   -   -   -   -   -   -   5   -   5   
+x   -   -   -   -   6   6   -   6   -   
+x   -   -   -   -   -   2   2   -   -   
+x   -   -   -   -   -   -   -   -   1   
+x   -   -   -   -   -   -   -   6   -   
+x   -   -   -   -   -   -   -   -   1   
+x   -   -   -   -   -   -   -   -   -   
+inserting 1 into ranks of rank 1
+tmp_graph len: 10
+sum ranks: 2
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   -   3   3   -   -   -   -   -   
+x   x   -   -   -   -   -   5   -   5   
+x   x   -   -   -   6   6   -   6   -   
+x   x   -   -   -   -   2   2   -   -   
+x   x   -   -   -   -   -   -   -   1   
+x   x   -   -   -   -   -   -   6   -   
+x   x   -   -   -   -   -   -   -   1   
+x   x   -   -   -   -   -   -   -   -   
+inserting 2 into ranks of rank 2
+tmp_graph len: 10
+sum ranks: 3
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   -   -   -   -   5   -   5   
+x   x   x   -   -   6   6   -   6   -   
+x   x   x   -   -   -   2   2   -   -   
+x   x   x   -   -   -   -   -   -   1   
+x   x   x   -   -   -   -   -   6   -   
+x   x   x   -   -   -   -   -   -   1   
+x   x   x   -   -   -   -   -   -   -   
+inserting 3 into ranks of rank 3
+inserting 4 into ranks of rank 3
+tmp_graph len: 10
+sum ranks: 5
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   2   2   -   -   
+x   x   x   x   x   -   -   -   -   1   
+x   x   x   x   x   -   -   -   6   -   
+x   x   x   x   x   -   -   -   -   1   
+x   x   x   x   x   -   -   -   -   -   
+inserting 5 into ranks of rank 4
+tmp_graph len: 10
+sum ranks: 6
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   -   -   -   1   
+x   x   x   x   x   x   -   -   6   -   
+x   x   x   x   x   x   -   -   -   1   
+x   x   x   x   x   x   -   -   -   -   
+inserting 6 into ranks of rank 5
+inserting 7 into ranks of rank 5
+tmp_graph len: 10
+sum ranks: 8
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   -   1   
+x   x   x   x   x   x   x   x   -   -   
+inserting 8 into ranks of rank 6
+tmp_graph len: 10
+sum ranks: 9
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   -   
+inserting 9 into ranks of rank 7
+The vertices of rank 0 are: [0]
+The vertices of rank 1 are: [1]
+The vertices of rank 2 are: [2]
+The vertices of rank 3 are: [3, 4]
+The vertices of rank 4 are: [5]
+The vertices of rank 5 are: [6, 7]
+The vertices of rank 6 are: [8]
+The vertices of rank 7 are: [9]
+removing vertice 0: ['0', '0', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['2', '-', '2', '2', '-', '-', '-', '-']
+removing vertice 0: ['3', '3', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '-', '-', '5', '-', '5']
+removing vertice 0: ['6', '6', '-', '6', '-']
+removing vertice 0: ['2', '2', '-', '-']
+removing vertice 0: ['-', '-', '1']
+removing vertice 0: ['6', '-']
+removing vertice 0: ['1']
+removing vertice 0: []
+THERE IS NO CYCLE
+ENTRY PT IS  True  EXIT PT IS  True  CYCLE IS  False  WEIGHT  True  ZERO IS  True  NEG  True
+The graph is a scheduling graph
+p [[], [], [], [], [], [], [], [], [], []]
+----EARLIEST DATE----
+For node 1: [[0, 0]]
+[0, 0]
+For node 2: [[0, 0], [1, 0]]
+[1, 0]
+For node 3: [[2, 2]]
+[2, 2]
+For node 4: [[1, 0], [2, 2]]
+[2, 2]
+For node 5: [[1, 0], [4, 5]]
+[4, 5]
+For node 6: [[4, 5], [5, 11]]
+[5, 11]
+For node 7: [[3, 5], [5, 11]]
+[5, 11]
+For node 8: [[4, 5], [7, 13]]
+[7, 13]
+For node 9: [[3, 5], [6, 13], [8, 19]]
+[8, 19]
+[[0, 0], [1, 0], [2, 2], [3, 5], [4, 5], [5, 11], [6, 13], [7, 13], [8, 19], [9, 20]]
+----LATEST DATE----
+For node 8: [[9, 20]]
+[9, 20]
+For node 6: [[9, 20]]
+[9, 20]
+For node 7: [[8, 19]]
+[8, 19]
+For node 5: [[6, 19], [7, 13]]
+[7, 13]
+For node 3: [[7, 13], [9, 20]]
+[7, 13]
+For node 4: [[5, 11], [6, 19], [8, 19]]
+[5, 11]
+For node 2: [[3, 8], [4, 5]]
+[4, 5]
+For node 1: [[2, 2], [4, 5], [5, 11]]
+[2, 2]
+For node 0: [[1, 0], [2, 2]]
+[1, 0]
+[[0, 0], [1, 0], [2, 2], [3, 8], [4, 5], [5, 11], [6, 19], [7, 13], [8, 19], [9, 20]]
+----MARGINS----
+[[0, 0], [1, 0], [2, 0], [3, 3], [4, 0], [5, 0], [6, 6], [7, 0], [8, 0], [9, 0]]
+Enter the number of your graph (0 to quit): 

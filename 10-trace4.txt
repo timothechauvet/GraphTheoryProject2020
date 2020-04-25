@@ -1,0 +1,330 @@
+Enter the number of your graph (0 to quit): 
+---File reading---
+['-', '0', '0', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '2', '-', '-', '2', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '5', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '4', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '1', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '9']
+['-', '-', '-', '-', '-', '2', '-', '2', '-', '-', '-', '2', '-', '2', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '5', '-', '-', '-', '5', '-', '-']
+['-', '-', '-', '-', '-', '5', '-', '-', '-', '5', '-', '-', '5', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '9', '-', '9', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '2', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '19', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '5']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '1']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+
+- ADJACENT MATRIX -
+
+
+0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 1 0 1 0 0 0 1 0 1 0 
+0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 
+0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+
+- VALUE MATRIX -
+
+
+-   0   0   -   -   -   -   -   -   -   -   -   -   -   -   
+-   -   -   2   -   -   2   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   5   -   -   -   -   -   -   -   -   
+-   -   -   -   4   -   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   1   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   9   
+-   -   -   -   -   2   -   2   -   -   -   2   -   2   -   
+-   -   -   -   -   -   -   -   5   -   -   -   5   -   -   
+-   -   -   -   -   5   -   -   -   5   -   -   5   -   -   
+-   -   -   -   -   -   -   -   -   -   9   -   9   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   2   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   19  -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   5   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   -   
+removing vertice 0: ['0', '0', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '2', '-', '-', '2', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '-', '-', '5', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['4', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['1', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 1: ['2', '2', '-', '-', '-', '2', '-', '2', '-']
+removing vertice 1: ['-', '5', '-', '-', '-', '5', '-', '-']
+removing vertice 1: ['5', '5', '-', '-', '5', '-', '-']
+removing vertice 0: ['-', '-', '-', '-', '-', '9']
+removing vertice 0: ['9', '-', '9', '-', '-']
+removing vertice 0: ['-', '2', '-', '-']
+removing vertice 0: ['-', '19', '-']
+removing vertice 0: ['-', '5']
+removing vertice 0: ['1']
+removing vertice 0: []
+THERE IS NO CYCLE
+tmp_graph len: 15
+sum ranks: 0
+-   0   0   -   -   -   -   -   -   -   -   -   -   -   -   
+-   -   -   2   -   -   2   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   5   -   -   -   -   -   -   -   -   
+-   -   -   -   4   -   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   1   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   9   
+-   -   -   -   -   2   -   2   -   -   -   2   -   2   -   
+-   -   -   -   -   -   -   -   5   -   -   -   5   -   -   
+-   -   -   -   -   5   -   -   -   5   -   -   5   -   -   
+-   -   -   -   -   -   -   -   -   -   9   -   9   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   2   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   19  -   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   5   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   1   
+-   -   -   -   -   -   -   -   -   -   -   -   -   -   -   
+inserting 0 into ranks of rank 0
+tmp_graph len: 15
+sum ranks: 1
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   -   2   -   -   2   -   -   -   -   -   -   -   -   
+x   -   -   -   -   -   5   -   -   -   -   -   -   -   -   
+x   -   -   -   4   -   -   -   -   -   -   -   -   -   -   
+x   -   -   -   -   1   -   -   -   -   -   -   -   -   -   
+x   -   -   -   -   -   -   -   -   -   -   -   -   -   9   
+x   -   -   -   -   2   -   2   -   -   -   2   -   2   -   
+x   -   -   -   -   -   -   -   5   -   -   -   5   -   -   
+x   -   -   -   -   5   -   -   -   5   -   -   5   -   -   
+x   -   -   -   -   -   -   -   -   -   9   -   9   -   -   
+x   -   -   -   -   -   -   -   -   -   -   -   2   -   -   
+x   -   -   -   -   -   -   -   -   -   -   -   -   19  -   
+x   -   -   -   -   -   -   -   -   -   -   -   -   -   5   
+x   -   -   -   -   -   -   -   -   -   -   -   -   -   1   
+x   -   -   -   -   -   -   -   -   -   -   -   -   -   -   
+inserting 1 into ranks of rank 1
+inserting 2 into ranks of rank 1
+tmp_graph len: 15
+sum ranks: 3
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   -   4   -   -   -   -   -   -   -   -   -   -   
+x   x   x   -   -   1   -   -   -   -   -   -   -   -   -   
+x   x   x   -   -   -   -   -   -   -   -   -   -   -   9   
+x   x   x   -   -   2   -   2   -   -   -   2   -   2   -   
+x   x   x   -   -   -   -   -   5   -   -   -   5   -   -   
+x   x   x   -   -   5   -   -   -   5   -   -   5   -   -   
+x   x   x   -   -   -   -   -   -   -   9   -   9   -   -   
+x   x   x   -   -   -   -   -   -   -   -   -   2   -   -   
+x   x   x   -   -   -   -   -   -   -   -   -   -   19  -   
+x   x   x   -   -   -   -   -   -   -   -   -   -   -   5   
+x   x   x   -   -   -   -   -   -   -   -   -   -   -   1   
+x   x   x   -   -   -   -   -   -   -   -   -   -   -   -   
+inserting 3 into ranks of rank 2
+inserting 6 into ranks of rank 2
+tmp_graph len: 15
+sum ranks: 5
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   -   1   x   -   -   -   -   -   -   -   -   
+x   x   x   x   -   -   x   -   -   -   -   -   -   -   9   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   -   -   x   -   5   -   -   -   5   -   -   
+x   x   x   x   -   5   x   -   -   5   -   -   5   -   -   
+x   x   x   x   -   -   x   -   -   -   9   -   9   -   -   
+x   x   x   x   -   -   x   -   -   -   -   -   2   -   -   
+x   x   x   x   -   -   x   -   -   -   -   -   -   19  -   
+x   x   x   x   -   -   x   -   -   -   -   -   -   -   5   
+x   x   x   x   -   -   x   -   -   -   -   -   -   -   1   
+x   x   x   x   -   -   x   -   -   -   -   -   -   -   -   
+inserting 4 into ranks of rank 3
+inserting 7 into ranks of rank 3
+inserting 11 into ranks of rank 3
+tmp_graph len: 15
+sum ranks: 8
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   -   -   -   x   -   -   9   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   5   x   x   -   5   -   x   5   -   -   
+x   x   x   x   x   -   x   x   -   -   9   x   9   -   -   
+x   x   x   x   x   -   x   x   -   -   -   x   2   -   -   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   -   -   -   x   -   -   5   
+x   x   x   x   x   -   x   x   -   -   -   x   -   -   1   
+x   x   x   x   x   -   x   x   -   -   -   x   -   -   -   
+inserting 8 into ranks of rank 4
+inserting 13 into ranks of rank 4
+tmp_graph len: 15
+sum ranks: 10
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   x   -   -   x   -   x   9   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   x   -   9   x   9   x   -   
+x   x   x   x   x   -   x   x   x   -   -   x   2   x   -   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   x   -   -   x   -   x   5   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   -   x   x   x   -   -   x   -   x   -   
+inserting 5 into ranks of rank 5
+inserting 9 into ranks of rank 5
+tmp_graph len: 15
+sum ranks: 12
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   -   x   2   x   -   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   -   x   -   x   5   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   -   x   -   x   -   
+inserting 10 into ranks of rank 6
+tmp_graph len: 15
+sum ranks: 13
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   -   x   5   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   -   x   -   
+inserting 12 into ranks of rank 7
+tmp_graph len: 15
+sum ranks: 14
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   x   x   -   
+inserting 14 into ranks of rank 8
+The vertices of rank 0 are: [0]
+The vertices of rank 1 are: [1, 2]
+The vertices of rank 2 are: [3, 6]
+The vertices of rank 3 are: [4, 7, 11]
+The vertices of rank 4 are: [8, 13]
+The vertices of rank 5 are: [5, 9]
+The vertices of rank 6 are: [10]
+The vertices of rank 7 are: [12]
+The vertices of rank 8 are: [14]
+removing vertice 0: ['0', '0', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '2', '-', '-', '2', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['-', '-', '-', '5', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['4', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 0: ['1', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+removing vertice 1: ['2', '2', '-', '-', '-', '2', '-', '2', '-']
+removing vertice 1: ['-', '5', '-', '-', '-', '5', '-', '-']
+removing vertice 1: ['5', '5', '-', '-', '5', '-', '-']
+removing vertice 0: ['-', '-', '-', '-', '-', '9']
+removing vertice 0: ['9', '-', '9', '-', '-']
+removing vertice 0: ['-', '2', '-', '-']
+removing vertice 0: ['-', '19', '-']
+removing vertice 0: ['-', '5']
+removing vertice 0: ['1']
+removing vertice 0: []
+THERE IS NO CYCLE
+ENTRY PT IS  True  EXIT PT IS  True  CYCLE IS  False  WEIGHT  True  ZERO IS  True  NEG  True
+The graph is a scheduling graph
+p [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []]
+----EARLIEST DATE----
+For node 1: [[0, 0]]
+[0, 0]
+For node 2: [[0, 0]]
+[0, 0]
+For node 3: [[1, 0]]
+[1, 0]
+For node 6: [[1, 0], [2, 0]]
+[2, 0]
+For node 4: [[3, 2]]
+[3, 2]
+For node 7: [[6, 5]]
+[6, 5]
+For node 11: [[6, 5]]
+[6, 5]
+For node 8: [[7, 7]]
+[7, 7]
+For node 13: [[6, 5], [11, 7]]
+[11, 7]
+For node 5: [[4, 6], [6, 5], [8, 12]]
+[8, 12]
+For node 9: [[8, 12]]
+[8, 12]
+For node 10: [[9, 17]]
+[9, 17]
+For node 12: [[7, 7], [8, 12], [9, 17], [10, 26]]
+[10, 26]
+For node 14: [[5, 17], [12, 28], [13, 26]]
+[12, 28]
+[[0, 0], [1, 0], [2, 0], [3, 2], [4, 6], [5, 17], [6, 5], [7, 7], [8, 12], [9, 17], [10, 26], [11, 7], [12, 28], [13, 26], [14, 33]]
+----LATEST DATE----
+For node 12: [[14, 33]]
+[14, 33]
+For node 10: [[12, 28]]
+[12, 28]
+For node 5: [[14, 33]]
+[14, 33]
+For node 9: [[10, 26], [12, 28]]
+[10, 26]
+For node 8: [[5, 24], [9, 17], [12, 28]]
+[9, 17]
+For node 13: [[14, 33]]
+[14, 33]
+For node 4: [[5, 24]]
+[5, 24]
+For node 7: [[8, 12], [12, 28]]
+[8, 12]
+For node 11: [[13, 32]]
+[13, 32]
+For node 3: [[4, 23]]
+[4, 23]
+For node 6: [[5, 24], [7, 7], [11, 13], [13, 32]]
+[7, 7]
+For node 1: [[3, 19], [6, 5]]
+[6, 5]
+For node 2: [[6, 5]]
+[6, 5]
+For node 0: [[1, 3], [2, 0]]
+[2, 0]
+[[0, 0], [1, 3], [2, 0], [3, 19], [4, 23], [5, 24], [6, 5], [7, 7], [8, 12], [9, 17], [10, 26], [11, 13], [12, 28], [13, 32], [14, 33]]
+----MARGINS----
+[[0, 0], [1, 3], [2, 0], [3, 17], [4, 17], [5, 7], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 6], [12, 0], [13, 6], [14, 0]]
+Enter the number of your graph (0 to quit): 

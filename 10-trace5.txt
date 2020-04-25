@@ -1,0 +1,228 @@
+Enter the number of your graph (0 to quit): 
+---File reading---
+['-', '-', '-', '-', '0', '-', '0', '0', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '1', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '2']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '3', '-', '-']
+['-', '4', '-', '-', '-', '4', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '5', '-', '-', '-']
+['-', '-', '-', '6', '-', '-', '-', '-', '-', '-', '6', '-']
+['-', '-', '7', '-', '-', '-', '-', '-', '7', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '8', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '9']
+['-', '10', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-']
+
+- ADJACENT MATRIX -
+
+
+0 0 0 0 1 0 1 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 0 0 1 0 0 
+0 1 0 0 0 1 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 1 0 0 0 
+0 0 0 1 0 0 0 0 0 0 1 0 
+0 0 1 0 0 0 0 0 1 0 0 0 
+0 0 0 0 0 0 0 0 0 1 0 0 
+0 0 0 0 0 0 0 0 0 0 0 1 
+0 1 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 
+
+- VALUE MATRIX -
+
+
+-   -   -   -   0   -   0   0   -   -   -   -   
+-   -   -   -   -   -   -   -   -   1   -   -   
+-   -   -   -   -   -   -   -   -   -   -   2   
+-   -   -   -   -   -   -   -   -   3   -   -   
+-   4   -   -   -   4   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   5   -   -   -   
+-   -   -   6   -   -   -   -   -   -   6   -   
+-   -   7   -   -   -   -   -   7   -   -   -   
+-   -   -   -   -   -   -   -   -   8   -   -   
+-   -   -   -   -   -   -   -   -   -   -   9   
+-   10  -   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   
+removing vertice 0: ['-', '-', '-', '0', '-', '0', '0', '-', '-', '-', '-']
+removing vertice 3: ['4', '-', '-', '4', '-', '-', '-', '-', '-', '-']
+removing vertice 3: ['-', '-', '-', '-', '-', '5', '-', '-', '-']
+removing vertice 3: ['-', '-', '6', '-', '-', '-', '6', '-']
+removing vertice 2: ['-', '-', '-', '-', '3', '-', '-']
+removing vertice 2: ['-', '7', '7', '-', '-', '-']
+removing vertice 1: ['-', '-', '-', '-', '2']
+removing vertice 1: ['-', '8', '-', '-']
+removing vertice 2: ['10', '-', '-']
+removing vertice 0: ['1', '-']
+removing vertice 0: ['9']
+removing vertice 0: []
+THERE IS NO CYCLE
+tmp_graph len: 12
+sum ranks: 0
+-   -   -   -   0   -   0   0   -   -   -   -   
+-   -   -   -   -   -   -   -   -   1   -   -   
+-   -   -   -   -   -   -   -   -   -   -   2   
+-   -   -   -   -   -   -   -   -   3   -   -   
+-   4   -   -   -   4   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   5   -   -   -   
+-   -   -   6   -   -   -   -   -   -   6   -   
+-   -   7   -   -   -   -   -   7   -   -   -   
+-   -   -   -   -   -   -   -   -   8   -   -   
+-   -   -   -   -   -   -   -   -   -   -   9   
+-   10  -   -   -   -   -   -   -   -   -   -   
+-   -   -   -   -   -   -   -   -   -   -   -   
+inserting 0 into ranks of rank 0
+tmp_graph len: 12
+sum ranks: 1
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   -   -   -   -   -   -   -   1   -   -   
+x   -   -   -   -   -   -   -   -   -   -   2   
+x   -   -   -   -   -   -   -   -   3   -   -   
+x   4   -   -   -   4   -   -   -   -   -   -   
+x   -   -   -   -   -   -   -   5   -   -   -   
+x   -   -   6   -   -   -   -   -   -   6   -   
+x   -   7   -   -   -   -   -   7   -   -   -   
+x   -   -   -   -   -   -   -   -   8   -   -   
+x   -   -   -   -   -   -   -   -   -   -   9   
+x   10  -   -   -   -   -   -   -   -   -   -   
+x   -   -   -   -   -   -   -   -   -   -   -   
+inserting 4 into ranks of rank 1
+inserting 6 into ranks of rank 1
+inserting 7 into ranks of rank 1
+tmp_graph len: 12
+sum ranks: 4
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   -   -   x   -   x   x   -   1   -   -   
+x   -   -   -   x   -   x   x   -   -   -   2   
+x   -   -   -   x   -   x   x   -   3   -   -   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   -   -   x   -   x   x   5   -   -   -   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   -   -   x   -   x   x   -   8   -   -   
+x   -   -   -   x   -   x   x   -   -   -   9   
+x   10  -   -   x   -   x   x   -   -   -   -   
+x   -   -   -   x   -   x   x   -   -   -   -   
+inserting 2 into ranks of rank 2
+inserting 3 into ranks of rank 2
+inserting 5 into ranks of rank 2
+inserting 10 into ranks of rank 2
+tmp_graph len: 12
+sum ranks: 8
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   x   x   x   x   x   x   -   1   x   -   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   x   x   x   x   x   x   -   8   x   -   
+x   -   x   x   x   x   x   x   -   -   x   9   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   -   x   x   x   x   x   x   -   -   x   -   
+inserting 1 into ranks of rank 3
+inserting 8 into ranks of rank 3
+tmp_graph len: 12
+sum ranks: 10
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   -   x   9   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   -   x   -   
+inserting 9 into ranks of rank 4
+tmp_graph len: 12
+sum ranks: 11
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   x   
+x   x   x   x   x   x   x   x   x   x   x   -   
+inserting 11 into ranks of rank 5
+The vertices of rank 0 are: [0]
+The vertices of rank 1 are: [4, 6, 7]
+The vertices of rank 2 are: [2, 3, 5, 10]
+The vertices of rank 3 are: [1, 8]
+The vertices of rank 4 are: [9]
+The vertices of rank 5 are: [11]
+removing vertice 0: ['-', '-', '-', '0', '-', '0', '0', '-', '-', '-', '-']
+removing vertice 3: ['4', '-', '-', '4', '-', '-', '-', '-', '-', '-']
+removing vertice 3: ['-', '-', '-', '-', '-', '5', '-', '-', '-']
+removing vertice 3: ['-', '-', '6', '-', '-', '-', '6', '-']
+removing vertice 2: ['-', '-', '-', '-', '3', '-', '-']
+removing vertice 2: ['-', '7', '7', '-', '-', '-']
+removing vertice 1: ['-', '-', '-', '-', '2']
+removing vertice 1: ['-', '8', '-', '-']
+removing vertice 2: ['10', '-', '-']
+removing vertice 0: ['1', '-']
+removing vertice 0: ['9']
+removing vertice 0: []
+THERE IS NO CYCLE
+ENTRY PT IS  True  EXIT PT IS  True  CYCLE IS  False  WEIGHT  True  ZERO IS  True  NEG  True
+The graph is a scheduling graph
+p [[], [], [], [], [], [], [], [], [], [], [], []]
+----EARLIEST DATE----
+For node 4: [[0, 0]]
+[0, 0]
+For node 6: [[0, 0]]
+[0, 0]
+For node 7: [[0, 0]]
+[0, 0]
+For node 2: [[7, 0]]
+[7, 0]
+For node 3: [[6, 0]]
+[6, 0]
+For node 5: [[4, 0]]
+[4, 0]
+For node 10: [[6, 0]]
+[6, 0]
+For node 1: [[4, 0], [10, 6]]
+[10, 6]
+For node 8: [[5, 4], [7, 0]]
+[5, 4]
+For node 9: [[1, 16], [3, 6], [8, 9]]
+[1, 16]
+For node 11: [[2, 7], [9, 17]]
+[9, 17]
+[[0, 0], [1, 16], [2, 7], [3, 6], [4, 0], [5, 4], [6, 0], [7, 0], [8, 9], [9, 17], [10, 6], [11, 26]]
+----LATEST DATE----
+For node 9: [[11, 26]]
+[11, 26]
+For node 1: [[9, 17]]
+[9, 17]
+For node 8: [[9, 17]]
+[9, 17]
+For node 2: [[11, 26]]
+[11, 26]
+For node 3: [[9, 17]]
+[9, 17]
+For node 5: [[8, 9]]
+[8, 9]
+For node 10: [[1, 16]]
+[1, 16]
+For node 4: [[1, 16], [5, 4]]
+[5, 4]
+For node 6: [[3, 14], [10, 6]]
+[10, 6]
+For node 7: [[2, 24], [8, 9]]
+[8, 9]
+For node 0: [[4, 0], [6, 0], [7, 2]]
+[4, 0]
+[[0, 0], [1, 16], [2, 24], [3, 14], [4, 0], [5, 4], [6, 0], [7, 2], [8, 9], [9, 17], [10, 6], [11, 26]]
+----MARGINS----
+[[0, 0], [1, 0], [2, 17], [3, 8], [4, 0], [5, 0], [6, 0], [7, 2], [8, 0], [9, 0], [10, 0], [11, 0]]
+Enter the number of your graph (0 to quit): 
