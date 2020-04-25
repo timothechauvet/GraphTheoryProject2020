@@ -139,6 +139,7 @@ class Graph:
                 tsk = ranked_task[r][my]
                 t1 = mt + t0
                 t0 = copy.deepcopy(t1)
+                print(tsk,"pour",mt)
 
         print("The earliest date is",t1)
 

@@ -40,7 +40,10 @@ def main():
         
         graph.check_scheduling_graph()
 
+        graph.earliest_date()
+
         nb_graph = user_input()
+
 
 
 # Main program
