@@ -21,6 +21,7 @@ def user_input():
 
 def main():
     nb_graph = user_input()
+    
 
     while nb_graph:
 
@@ -39,9 +40,9 @@ def main():
             graph.display_ranks()
         
         if graph.check_scheduling_graph():
-			print("The graph is a scheduling graph")
+            print("The graph is a scheduling graph")
 
-        graph.earliest_date()
+        graph.dates()
 
         nb_graph = user_input()
 

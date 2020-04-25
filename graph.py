@@ -82,7 +82,7 @@ class Graph:
         negative = no_negative_arc(self.adjacency_matrix)
 
         print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr, " NEG ", negative)
-		return (entry_pt and exit_pt and not cycle and weight and zero_etr and negative)
+        return (entry_pt and exit_pt and not cycle and weight and zero_etr and negative)
 
 
     def find_predecessors(self):
@@ -101,7 +101,7 @@ class Graph:
             
         return predecessors
 
-    def earliest_date(self):
+    def dates(self):
         print("----EARLIEST DATE----")
         ranked_task = calculate_ranks(copy.deepcopy(self.adjacency_matrix))
         predecessors = self.find_predecessors()
@@ -122,17 +122,17 @@ class Graph:
 
         tsk = 0
         t0 = 0
-        for r in range(1,len(ranked_task)-1):
-            #if predecessor is tsk
+        path = [ranked_task[0][0]]
+        for r in range(1,len(ranked_task)-1):#for rank 1...n
             tmp = []
-            for x in range(0,len(ranked_predecessors[r])):
-                
-                if tsk in ranked_predecessors[r][x]:
+            for x in range(0,len(ranked_predecessors[r])):  #index of each task in each rank
+                #if predecessor is tsk, added in tmp
+                if tsk in ranked_predecessors[r][x]: 
                     tmp.append(x)
 
             time = []
             for x in tmp:
-                time.append(task_time[r][x])
+                time.append(task_time[r][x]) #time of each task
 
             if tmp:
                 mt = max(time)
@@ -140,9 +140,47 @@ class Graph:
                 tsk = ranked_task[r][my]
                 t1 = mt + t0
                 t0 = copy.deepcopy(t1)
-                print(tsk,"pour",mt)
+                path.append(tsk)
+                #print(tsk,"pour",mt)
+        path.append(ranked_task[len(ranked_task)-1][0])
+        print("The earliest date is",t1, "with the path ",path)
 
-        print("The earliest date is",t1)
+
+        print("----LATEST DATE----")
+        #debug
+        #print(ranked_task[len(ranked_task)-1][0])
+        tsk = ranked_task[len(ranked_task)-1][0]
+        t0 = t1
+        time = []
+        for r in range(len(ranked_task)-1,-1,-1): #r = max rank to 0
+            tmp = []
+
+            dx = ranked_task.index([tsk])
+            pred = ranked_predecessors[dx][0]
+            for x in range(0,len(ranked_task[r])):
+                for y in pred:
+                    if y == ranked_task[r][x]:
+                        tmp.append(x)
+            
+            
+            for x in tmp:
+                time.append(task_time[r][x])
+        
+        mint = min(time)
+        #find wich task has this time
+
+        
+                #in predecessors of tsk
+                
+#            if tmp:
+#                mt = min(time)
+#                my =task_time [r].index(mt)
+#                tsk = ranked_task[r][my]
+#                t1 = mt - t0
+#                t0 = copy.deepcopy(t1)
+                #print(tsk,"pour",mt)
+
+        print("The latest date is",t1)
 
     
     def calculate_time(self,tmp_graph):
