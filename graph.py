@@ -82,6 +82,7 @@ class Graph:
         negative = no_negative_arc(self.adjacency_matrix)
 
         print("ENTRY PT IS ", entry_pt, " EXIT PT IS ", exit_pt, " CYCLE IS ", cycle, " WEIGHT ", weight, " ZERO IS ", zero_etr, " NEG ", negative)
+		return (entry_pt and exit_pt and not cycle and weight and zero_etr and negative)
 
 
     def find_predecessors(self):

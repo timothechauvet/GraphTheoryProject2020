@@ -38,7 +38,8 @@ def main():
             # Display ranks
             graph.display_ranks()
         
-        graph.check_scheduling_graph()
+        if graph.check_scheduling_graph():
+			print("The graph is a scheduling graph")
 
         nb_graph = user_input()
 
